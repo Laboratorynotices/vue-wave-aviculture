@@ -1,12 +1,21 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <w-app>
+
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+    <!-- All your app content goes here. -->
+
+    <!-- Also try to add a button! -->
+    <w-button>My Button</w-button>
+  </w-app>
 </template>
 
 <style lang="scss">
+@import '~wave-ui/dist/wave-ui.css';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
