@@ -1,20 +1,27 @@
 <template>
-  <w-app>
-
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-    <!-- All your app content goes here. -->
-
-    <!-- Also try to add a button! -->
-    <w-button>My Button</w-button>
+  <w-app id="app">
+    <header>Header</header>
+    <w-flex grow>
+      <aside>
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link>
+        </div>
+      </aside>
+      <main class="grow">
+        <router-view/>
+      </main>
+    </w-flex>
+    <footer>Footer</footer>
   </w-app>
 </template>
 
 <style lang="scss">
 @import '~wave-ui/dist/wave-ui.css';
+
+body {
+  background-color: rgb(255, 255, 198);
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
